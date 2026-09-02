@@ -31,7 +31,7 @@ jobs:
           cache: npm
 
       - name: Instalar dependências
-        run: npm ci
+        run: npm install
 
       - name: Gerar site estático
         run: npm run build:pages

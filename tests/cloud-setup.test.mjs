@@ -1,0 +1,3 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {readFile} from 'node:fs/promises';
+test('schema ativa RLS e limita registros ao usuário autenticado',async()=>{const sql=await readFile(new URL('../supabase/schema.sql',import.meta.url),'utf8');assert.match(sql,/enable row level security/i);assert.match(sql,/auth\.uid\(\) = user_id/g);assert.doesNotMatch(sql,/service_role/i)});
+test('workflow do GitHub Pages injeta apenas chaves públicas',async()=>{const yaml=await readFile(new URL('../.github/workflows/deploy-pages.yml',import.meta.url),'utf8');assert.match(yaml,/NEXT_PUBLIC_SUPABASE_ANON_KEY/);assert.doesNotMatch(yaml,/SERVICE_ROLE/);assert.match(yaml,/dist-pages/)});
