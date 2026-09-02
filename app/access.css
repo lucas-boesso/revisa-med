@@ -12,3 +12,26 @@
 
 .invite-only svg { width: 17px; flex: none; }
 .empty span { font-size: 13px; color: #7e8b9d; text-align: center; max-width: 460px; line-height: 1.55; }
+
+.calendar-tools { display: flex; align-items: center; gap: 7px; }
+.calendar-tools button { width: 34px; height: 34px; border: 1px solid #dce3ea; border-radius: 8px; background: white; color: #425267; display: grid; place-items: center; cursor: pointer; }
+.calendar-tools button svg { width: 17px; }
+.calendar-tools .today-button { width: auto; padding: 0 12px; font-size: 12px; font-weight: 700; }
+.legend .blue { background: #3b82f6; }
+.cell span.completed { background: #eaf2ff; color: #245ea9; }
+
+.exam-layout { display: grid; grid-template-columns: minmax(300px, 420px) minmax(0, 1fr); gap: 19px; align-items: start; }
+.exam-list .panel-title > span { min-width: 28px; height: 28px; padding: 0 8px; border-radius: 20px; background: #edf2f6; display: grid; place-items: center; font-size: 12px; font-weight: 750; color: #526176; }
+.exam-row { display: grid; grid-template-columns: 54px minmax(0, 1fr) 36px; gap: 13px; align-items: center; padding: 14px 0; border-top: 1px solid #e8edf2; }
+.exam-date { width: 50px; height: 54px; border-radius: 10px; background: #eaf8f6; color: #126f68; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.exam-date b { font-size: 20px; line-height: 1; }
+.exam-date span { font-size: 10px; text-transform: uppercase; margin-top: 4px; }
+.exam-row > div:nth-child(2) { display: grid; grid-template-columns: minmax(0, 1fr) 145px; gap: 9px; }
+.exam-row input { min-width: 0; border: 1px solid #dbe3e9; border-radius: 8px; padding: 9px 10px; color: #26364a; background: #fbfcfd; }
+.exam-row .danger-text svg { width: 17px; }
+
+@media (max-width: 850px) {
+  .exam-layout { grid-template-columns: 1fr; }
+  .exam-row > div:nth-child(2) { grid-template-columns: 1fr; }
+  .calendar-head { align-items: flex-end; }
+}
