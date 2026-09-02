@@ -1,0 +1,14 @@
+.invite-only {
+  margin-top: 18px;
+  padding: 11px 12px;
+  border-radius: 9px;
+  background: #f0fdfa;
+  color: #17655f;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.invite-only svg { width: 17px; flex: none; }
+.empty span { font-size: 13px; color: #7e8b9d; text-align: center; max-width: 460px; line-height: 1.55; }
